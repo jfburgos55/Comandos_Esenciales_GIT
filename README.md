@@ -1,5 +1,4 @@
 # Comandos_Esenciales_GIT
-Creación del primer repositorio, el cual contiene información de como usar Git con comandos esenciales.
+Repositorio con comandos necesarios e información de lo que debes usar al momento de iniciarse en git.
 
-
-Powered by: John Burgos.
+Obtendras un listado con lo que vamos a utilizar en cualquier proyecto.
