@@ -9,5 +9,136 @@
 	<h3>
 		<p>Esto se crea con el fin de que las personas interesadas se inicien en el mundo de GIT.</p>
 	</h3>
+	<h4>
+		<p>
+			** Comandos GIT **
+
+	--Comandos Iniciales--
+
+git init -> Inicia el repositorio.
+
+git status -> Validar el estado de los archivos.
+
+git add nameFile -> Agregar archivo al repositorio.
+
+git rm --cached -> Eliminar lo que esta en el repositorio temporal.
+
+git commit -m "Comentario" -> Agregar cambios al server.
+
+git commit --amend -> Agregando commit cuando no se cargan los archivos.
+
+
+	--Etiquetas para GIT--
+
+git tag -a 0.5 -m 'Version Estable del proyecto' -> Tag anotado.
+
+git tag -l -> Ver la lista de tags.
+
+git tag -d number -> Eliminar tag agregado por error.
+
+git tag -f -a number -m -> Renombrar tag.
+
+	--LOGS--
+
+git log --oneline -> Reduce la lectura de los commits.
+
+git log --oneline --graph -> Manera grafica.
+
+git diff -> Comparar Cambios entre commits.
+
+git reset -> Reset a algun commit, hay tres tipos:
+			--soft -> 	Quita desde el repositorio.
+			--mixed ->	Quita desdel el repositorio y del staging 
+			--hard ->	Quita desdel el repositorio, del staging y del working directory.
+
+	--RAMAS EN GIT--
+
+git branch nombreRama -> Crear rama.
+
+git branch -l -> Listar ramas.
+
+git branch -m antiguoNombre nuevoNombre -> Renombrar ramas.
+
+
+	--Combinar Ramas--
+
+git merge nombreRama -> Merge a la rama master.
+
+git checkout -b nombreRama -> Se cambia de rama al crearla.
+
+git checkout -b nombreRama -> Se cambia de rama al crearla.
+
+git rebease -> Hacer lineal las combinaciones de las ramas.
+
+git stash -> Agregar cambios temporales en el local.
+
+
+	-- Creación Llave SSH --
+
+Comando Creación llave
+
+ssh-keygen -t rsa -b 4096 -C "cuenta de correo"
+
+Comando para copiar la llave ssh
+	
+En Windows: clip < ~/.ssh/id_rsa.pub
+
+En MAC: pbcopy < ~/.ssh/id_rsa.pub
+
+En linux o terminal: cat ~/.ssh/id_rsa.pub
+
+	-- Agregando al server Remoto -- 
+
+Comando para agregar al server en git
+	
+git remote add nombreLocal "urlssh" -> Convención del nombre 'origin'
+
+Comando para validar que la conexión fue exitosa.
+
+	git remote -v 
+
+Comando para remover el server remoto
+
+git remote remove nombreLocal
+
+	-- Comando para enviar o recibir desde el remoto --
+
+Traer lo del repositorio al local
+
+git fetch origin master
+
+Mezclar las ramas del server remoto con el local
+
+git merge origin/master --allow-unrelated-histories
+
+Manera sencilla de traer los cambios remotos con los cambios, e integrarlos localmente.
+
+git pull origin master
+
+Comando para enviar al server remoto
+
+git push origin master
+
+Comando para enviar al server remoto con los tags
+
+git push origin master --tags
+
+Comando para enviar las ramas al server 
+
+git push nombreRamaServer nombreRamamLocal
+
+	ejemplo: git push origin nueva-rama
+
+Omitir archivos, se agrega el archivo gitignore
+
+	touch .gitignore
+
+Luego se agrega el archivo que se quiere omitir:
+	
+	Ejemplo: vim .gitignore
+
+		Se agrega el archivo setting.py
+		</p>
+	</h4>
 </body>
 </html>
